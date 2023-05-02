@@ -1,6 +1,6 @@
-
+let questionNumbers = prompt("how many questions you want to answer ?")
 // Fetch quiz data from API
-const serverResponse = await fetch(`https://opentdb.com/api.php?amount=4`);
+const serverResponse = await fetch(`https://opentdb.com/api.php?amount=${questionNumbers}`);
 const data = await serverResponse.json();
 const dataFetched = data.results;
 
